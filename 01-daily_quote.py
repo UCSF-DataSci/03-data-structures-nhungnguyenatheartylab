@@ -16,15 +16,21 @@ from datetime import date
 
 
 quotes = [
-    # Create a list of quotes here
+    "The only limit to our realization of tomorrow is our doubts of today.",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "Believe you can and you're halfway there.",
+    "Do not watch the clock. Do what it does. Keep going.",
+    "You are never too old to set another goal or to dream a new dream.",
+    "Act as if what you do makes a difference. It does."
 ]
 
 def get_quote_of_the_day(quotes):
-    todays_quote = None
 
-    # Your code here
+    today = date.today()
+    random.seed(today.toordinal)
+
     
-    return todays_quote
+    return random.choice(quotes)
 
 if __name__ == "__main__":
     print(get_quote_of_the_day(quotes))
